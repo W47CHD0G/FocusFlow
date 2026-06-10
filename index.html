@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow | Student Time Management App</title>
+  <meta name="description" content="FocusFlow helps university students manage assignments, schedules, and focus sessions with less stress and better outcomes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">FocusFlow</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#features">Features</a>
+        <a href="#survey">Survey</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#about">About</a>
+        <a href="#cta" class="btn btn-small">Join Beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Built for University Students</p>
+          <h1>Take control of assignments, classes, and study time without burning out.</h1>
+          <p class="lead">FocusFlow combines planning, time blocking, and progress insights so students can stay on top of deadlines and protect focused study time.</p>
+          <div class="hero-actions">
+            <a href="#cta" class="btn">Get Early Access</a>
+            <a href="#survey" class="btn btn-outline">Share Feedback</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/images/app-mockup.svg" alt="FocusFlow app dashboard mockup preview">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Everything students need to manage time effectively</h2>
+        <div class="feature-grid">
+          <article><h3>Task & Assignment Management</h3><p>Organize assignments by module, deadline, and priority with quick actions and status tracking.</p></article>
+          <article><h3>Schedule & Calendar Integration</h3><p>See classes, labs, deadlines, and study blocks in one timeline for better weekly planning.</p></article>
+          <article><h3>Time Blocking & Focus Sessions</h3><p>Plan focused study sessions, set durations, and reduce distractions with smart timers.</p></article>
+          <article><h3>Progress Tracking & Analytics</h3><p>Measure completed tasks, consistency, and productivity trends to improve each week.</p></article>
+          <article><h3>Smart Reminder Notifications</h3><p>Get timely nudges before deadlines, lectures, and planned focus blocks.</p></article>
+          <article><h3>Clean, Intuitive Interface</h3><p>A distraction-free, student-friendly design that keeps planning simple and fast.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="survey" class="section section-alt">
+      <div class="container">
+        <h2>Student Time Management Survey</h2>
+        <p class="section-intro">Help us shape FocusFlow by sharing your real academic planning challenges.</p>
+        <form id="survey-form" class="survey-form">
+          <label>Year of Study
+            <select name="yearOfStudy" required>
+              <option value="">Select your year</option>
+              <option>First Year</option>
+              <option>Second Year</option>
+              <option>Third Year</option>
+              <option>Fourth Year</option>
+              <option>Postgraduate</option>
+            </select>
+          </label>
+          <label>Field of Study
+            <input type="text" name="fieldOfStudy" placeholder="e.g. Computer Science" required>
+          </label>
+          <label>What are your biggest time management challenges?
+            <textarea name="challenges" rows="3" required></textarea>
+          </label>
+          <label>How do you currently manage assignments?
+            <textarea name="assignmentManagement" rows="3" required></textarea>
+          </label>
+          <label>What are your schedule management pain points?
+            <textarea name="schedulePainPoints" rows="3" required></textarea>
+          </label>
+          <label>Which features would be most valuable to you?
+            <textarea name="valuableFeatures" rows="3" required></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="betaInterest">
+            I want to join the FocusFlow beta testing program.
+          </label>
+          <button type="submit" class="btn">Submit Survey</button>
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="prototype" class="section">
+      <div class="container">
+        <h2>App Prototype Preview</h2>
+        <div class="prototype-grid">
+          <article class="mockup-card">
+            <h3>Dashboard</h3>
+            <p>Daily priorities, upcoming deadlines, and quick-start focus sessions in one view.</p>
+          </article>
+          <article class="mockup-card">
+            <h3>Weekly Planner</h3>
+            <p>Drag-and-drop time blocks for classes, revision sessions, and assignment milestones.</p>
+          </article>
+          <article class="mockup-card">
+            <h3>Progress Insights</h3>
+            <p>Visual analytics on completion rate, streaks, and planned vs. completed study time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About FocusFlow</h2>
+        <p>FocusFlow is an entrepreneurship project focused on solving real student productivity challenges. Our team is building this app with direct input from university students to deliver practical tools for better planning, less stress, and stronger academic outcomes.</p>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta">
+      <div class="container">
+        <h2>Join the FocusFlow launch community</h2>
+        <p>Sign up for beta updates, complete the survey, and share feedback to help us build the best student planning experience.</p>
+        <div class="hero-actions">
+          <a href="#survey" class="btn">Take the Survey</a>
+          <a href="mailto:focusflow.team@gmail.com" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> FocusFlow. Built for students, by students.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

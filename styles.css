@@ -1,0 +1,274 @@
+:root {
+  --bg: #f4f7ff;
+  --surface: #ffffff;
+  --text: #1a2240;
+  --muted: #5a6486;
+  --primary: #4c6fff;
+  --primary-dark: #2f52f4;
+  --ring: rgba(76, 111, 255, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e6ebff;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  border: 1px solid #d5dcfb;
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 0.4rem 0.7rem;
+}
+
+.main-nav {
+  display: none;
+  position: absolute;
+  right: 4%;
+  top: 62px;
+  background: #fff;
+  border: 1px solid #dde4ff;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  box-shadow: 0 12px 28px rgba(19, 31, 80, 0.12);
+}
+
+.main-nav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero,
+.section {
+  padding: 3.5rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.lead,
+.section-intro {
+  color: var(--muted);
+}
+
+.hero-card {
+  background: var(--surface);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  box-shadow: 0 20px 35px rgba(21, 34, 82, 0.1);
+  animation: floatIn 0.7s ease-out;
+}
+
+.hero-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.72rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #c7d3ff;
+  color: var(--text);
+}
+
+.btn-small {
+  padding: 0.45rem 0.7rem;
+}
+
+.section-alt {
+  background: #eef2ff;
+}
+
+.feature-grid,
+.prototype-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-grid article,
+.mockup-card,
+.survey-form {
+  background: var(--surface);
+  border: 1px solid #e3e9ff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.survey-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.survey-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.survey-form input,
+.survey-form select,
+.survey-form textarea {
+  width: 100%;
+  border: 1px solid #ccd6ff;
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  font: inherit;
+}
+
+.survey-form input:focus,
+.survey-form select:focus,
+.survey-form textarea:focus {
+  outline: 3px solid var(--ring);
+  border-color: var(--primary);
+}
+
+.checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500 !important;
+}
+
+.cta {
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 1px solid #dce5ff;
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--muted);
+}
+
+#form-message {
+  margin: 0;
+  min-height: 1.5rem;
+  color: #145d2b;
+  font-weight: 600;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 760px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .prototype-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
