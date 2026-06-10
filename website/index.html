@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - University Student Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⏱️</span>
+                <span class="logo-text">FocusFlow</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pomodoro">Timer</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Your Time, Master Your Grades</h1>
+            <p>FocusFlow is the time management app designed specifically for university students. Balance classes, assignments, and study time with intelligent scheduling and focus techniques.</p>
+            <button class="cta-button" onclick="document.getElementById('dashboard-section').scrollIntoView({ behavior: 'smooth' })">
+                Explore Now
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="hero-graphic">📚✨⏰</div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section id="features" class="features">
+        <h2>Four Pillars of Academic Success</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Academic Dashboard</h3>
+                <p>See your classes and due assignments at a glance. Never miss an important deadline.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>Smart Assignment Tracker</h3>
+                <p>Assignments sorted by weight and urgency. Know what matters most for your GPA.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Focus Mode (Pomodoro)</h3>
+                <p>25-minute focused study sessions with 5-minute breaks. Built-in to keep you productive.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Time-Blocking Calendar</h3>
+                <p>Drag-and-drop study blocks around your lecture schedule. Visual time management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Dashboard Section -->
+    <section id="dashboard-section" class="dashboard-section">
+        <h2>Academic Dashboard</h2>
+        <p class="section-subtitle">Your daily overview at a glance</p>
+        <div class="dashboard-container">
+            <div id="academic-dashboard"></div>
+        </div>
+    </section>
+
+    <!-- Assignment Tracker Section -->
+    <section id="tracker-section" class="tracker-section">
+        <h2>Assignment Tracker</h2>
+        <p class="section-subtitle">Prioritized by weight and urgency</p>
+        <div class="tracker-container">
+            <div id="assignment-tracker"></div>
+        </div>
+    </section>
+
+    <!-- Pomodoro Timer Section -->
+    <section id="pomodoro" class="pomodoro-section">
+        <h2>Focus Mode - Pomodoro Timer</h2>
+        <p class="section-subtitle">Stay focused and productive</p>
+        <div class="pomodoro-container">
+            <div id="pomodoro-timer"></div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="calendar-section">
+        <h2>Time-Blocking Weekly Calendar</h2>
+        <p class="section-subtitle">Organize your week visually</p>
+        <div class="calendar-container">
+            <div id="calendar-view"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 FocusFlow. Empowering students to achieve their best. 🚀</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
